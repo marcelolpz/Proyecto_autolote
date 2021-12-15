@@ -10,15 +10,25 @@ namespace Proyecto_autolote.Services
     {
         private string weblinkUrl;
 
-        public async Task<T> validacionUsuario<T>(string p_username, string p_pass)
+        public async Task<T> validacionUsuario<T>(string p_username, string p_password)
         {
             HttpClient client = new HttpClient();
-            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/usuario/crud_usuario?id_usuario="
-                        + p_username + "&password=" + p_pass;
+            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/InicioSesion/USER?p_username="
+                        + p_username + "&p_password=" + p_password;
             var response = await client.GetAsync(url);
             var jsonstring = await response.Content.ReadAsStringAsync();
             return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
         }
+
+        public async Task<T> ListaUsuarios<T>()
+        {
+            HttpClient client = new HttpClient();
+            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/usuario/crud_usuario";
+            var response = await client.GetAsync(url);
+            var jsonstring = await response.Content.ReadAsStringAsync();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
+        }
+
 
     }
 }
