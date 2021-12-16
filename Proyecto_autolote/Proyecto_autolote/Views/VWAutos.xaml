@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_autolote.Views.VWAutos"
+             xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel"
+             Title="Autos">
+    <ContentPage.BindingContext>
+        <local:VMAuto></local:VMAuto>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView
+                ItemsSource="{Binding ListaUsuarios}"
+                SelectionMode="Single"
+                SelectedItem="{Binding UsuarioSeleccionado}"
+
+                >
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackLayout Padding="3,3">
+
+                            <Frame CornerRadius="10" BackgroundColor="Gray">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="#F7AD32"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.9*" />
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding id_usuario}" 
+                                           Grid.Row="0" 
+                                           Grid.Column="0"
+                                           FontSize="Default" 
+                                           FontAttributes="bold"
+                                           Grid.ColumnSpan="2"
+                                           VerticalOptions="Center"/>
+                                    <Label Text="{Binding nombres}" 
+                                           FontSize="Caption"
+                                           Grid.Column="0"
+                                           Grid.Row="1" 
+                                           Grid.ColumnSpan="2"
+                                           VerticalOptions="Center"
+                                           x:Name="tipoMantenimiento"
+                                            />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Label Text="Informacion de Usuarios"/>
+
+            <Label Text="{Binding UsuarioSeleccionado.correo}"/>
+            <Label Text="{Binding UsuarioSeleccionado.nombres}"/>
+            <Label Text="{Binding UsuarioSeleccionado.apellidos}"/>
+            <Label Text="{Binding UsuarioSeleccionado.activo}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

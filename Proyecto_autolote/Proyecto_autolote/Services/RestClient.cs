@@ -29,6 +29,14 @@ namespace Proyecto_autolote.Services
             return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
         }
 
+        public async Task<T> ListaAutos<T>()
+        {
+            HttpClient client = new HttpClient();
+            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/auto/crud_auto";
+            var response = await client.GetAsync(url);
+            var jsonstring = await response.Content.ReadAsStringAsync();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
+        }
 
     }
 }
