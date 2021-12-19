@@ -62,6 +62,7 @@
 
             <Label TextColor="White"   Text="Informacion de los autos"/>
 
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.foto}"/>
             <Label TextColor="White"  Text="{Binding AutoSeleccionado.placa}"/>
             <Label TextColor="White"  Text="{Binding AutoSeleccionado.modelo}"/>
             <Label TextColor="White"  Text="{Binding AutoSeleccionado.marca}"/>

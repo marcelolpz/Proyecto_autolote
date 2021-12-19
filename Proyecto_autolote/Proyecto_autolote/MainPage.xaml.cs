@@ -14,5 +14,10 @@ namespace Proyecto_autolote
         {
             InitializeComponent();
         }
+
+        private void Image_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

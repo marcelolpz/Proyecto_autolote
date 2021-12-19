@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel"
              Title="Estrena tu auto"
              BackgroundColor="#303030"
-             IconImageSource="autolotelogo.jpg"
+             IconImageSource="autolotelogo.jpeg"
              >
 
     <ContentPage.BindingContext>
@@ -13,13 +13,14 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <Label Text="Usuario" />
-        <Entry Keyboard="Text" Text="{Binding Usuario}" ></Entry>
+        <Image Source="autolotelogo.jpeg" ></Image>
+        <Label TextColor="White" Text="Usuario" />
+        <Entry TextColor="White" Keyboard="Text" Text="{Binding Usuario}" ></Entry>
 
-        <Label Text="Contraseña" ></Label>
-        <Entry Keyboard="Text" IsPassword="True" Text="{Binding Pass}" ></Entry>
+        <Label TextColor="White" Text="Contraseña" ></Label>
+        <Entry TextColor="White" Keyboard="Text" IsPassword="True" Text="{Binding Pass}" ></Entry>
 
-        <Button Text="Ingresar" Command="{Binding Ingresar}" ></Button>
+        <Button BackgroundColor="DarkRed" TextColor="White" Text="Ingresar" Command="{Binding Ingresar}" ></Button>
 
         <Label Text="{Binding Resultado}" />
     </StackLayout>

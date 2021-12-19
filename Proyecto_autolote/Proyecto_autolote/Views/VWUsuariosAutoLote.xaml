@@ -16,9 +16,7 @@
                 >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-
                         <StackLayout Padding="3,3">
-
                             <Frame CornerRadius="10" BackgroundColor="WhiteSmoke">
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup Name="CommonStates">
@@ -58,9 +56,8 @@
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-
             </CollectionView>
-
+            
             <Label TextColor="White" Text="Informacion de Usuarios"/>
 
             <Label TextColor="White"  Text="{Binding UsuarioSeleccionado.correo}"/>
