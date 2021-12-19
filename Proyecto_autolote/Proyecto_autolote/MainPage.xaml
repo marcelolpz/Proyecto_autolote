@@ -2,8 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto_autolote.MainPage"
-             xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel">
-             
+             xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel"
+             Title="Estrena tu auto"
+             BackgroundColor="#303030"
+             IconImageSource="autolotelogo.jpg"
+             >
 
     <ContentPage.BindingContext>
         <local:VMMainPage></local:VMMainPage>

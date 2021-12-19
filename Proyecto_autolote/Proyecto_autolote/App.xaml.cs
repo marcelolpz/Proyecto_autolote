@@ -10,7 +10,7 @@ namespace Proyecto_autolote
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.DarkRed };
         }
 
         protected override void OnStart()

@@ -10,18 +10,16 @@
     <ContentPage.Content>
         <StackLayout>
             <CollectionView
-                ItemsSource="{Binding ListaUsuarios}"
+                ItemsSource="{Binding ListaAutos}"
                 SelectionMode="Single"
-                SelectedItem="{Binding UsuarioSeleccionado}"
-
-                >
+                SelectedItem="{Binding AutoSeleccionado}">
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
 
                         <StackLayout Padding="3,3">
 
-                            <Frame CornerRadius="10" BackgroundColor="Gray">
+                            <Frame CornerRadius="10" BackgroundColor="WhiteSmoke">
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup Name="CommonStates">
                                         <VisualState Name="Selected">
@@ -40,20 +38,19 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding id_usuario}" 
+                                    <Label Text="{Binding placa}" 
                                            Grid.Row="0" 
                                            Grid.Column="0"
                                            FontSize="Default" 
                                            FontAttributes="bold"
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"/>
-                                    <Label Text="{Binding nombres}" 
+                                    <Label Text="{Binding modelo}" 
                                            FontSize="Caption"
                                            Grid.Column="0"
                                            Grid.Row="1" 
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"
-                                           x:Name="tipoMantenimiento"
                                             />
                                 </Grid>
                             </Frame>
@@ -63,12 +60,14 @@
 
             </CollectionView>
 
-            <Label Text="Informacion de Usuarios"/>
+            <Label TextColor="White"   Text="Informacion de los autos"/>
 
-            <Label Text="{Binding UsuarioSeleccionado.correo}"/>
-            <Label Text="{Binding UsuarioSeleccionado.nombres}"/>
-            <Label Text="{Binding UsuarioSeleccionado.apellidos}"/>
-            <Label Text="{Binding UsuarioSeleccionado.activo}"/>
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.placa}"/>
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.modelo}"/>
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.marca}"/>
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.year}"/>
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.precio}"/>
+            <Label TextColor="White"  Text="{Binding AutoSeleccionado.id_estado}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
