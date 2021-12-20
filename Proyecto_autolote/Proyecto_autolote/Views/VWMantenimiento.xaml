@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Proyecto_autolote.Views.VWAutos"
+             x:Class="Proyecto_autolote.Views.VWMantenimiento"
              xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel"
-             Title="Autos">
+             Title="Mantenimiento">
+
     <ContentPage.BindingContext>
-        <local:VMAuto></local:VMAuto>
+        <local:VMMantenimiento></local:VMMantenimiento>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <CollectionView
-                ItemsSource="{Binding ListaAutos}"
+                ItemsSource="{Binding ListaMantenimiento}"
                 SelectionMode="Single"
-                SelectedItem="{Binding AutoSeleccionado}">
+                SelectedItem="{Binding MantenimientoSeleccionado}">
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -45,7 +46,7 @@
                                            FontAttributes="bold"
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"/>
-                                    <Label Text="{Binding modelo}" 
+                                    <Label Text="{Binding descripcion_problema}" 
                                            FontSize="Caption"
                                            Grid.Column="0"
                                            Grid.Row="1" 
@@ -62,12 +63,21 @@
 
             <Label TextColor="White"   Text="Informacion de los autos"/>
 
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.placa}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.modelo}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.marca}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.year}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.precio}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.id_estado}"/>
+            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.placa}"/>
+            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.id_mantenimiento}"/>
+            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.descripcion_problema}"/>
+            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.id_mecanico}"/>
+            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.costo}"/>
+            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.fecha}"/>
+            
         </StackLayout>
     </ContentPage.Content>
+
+
+
+
+
 </ContentPage>
+    
+
+    
