@@ -12,7 +12,5 @@
     <local:VWAutos/>
     <local:VWMantenimiento/>
     <local:VWCliente/>
-    
-    <local:VWDetalle/>
 
 </TabbedPage>
