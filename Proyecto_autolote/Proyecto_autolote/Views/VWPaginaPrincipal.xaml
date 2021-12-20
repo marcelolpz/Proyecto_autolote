@@ -9,6 +9,10 @@
             BarTextColor="White"
             >
     <!--Pages can be added as references or inline-->
-    <local:VWUsuariosAutoLote/>
     <local:VWAutos/>
+    <local:VWMantenimiento/>
+    <local:VWCliente/>
+    
+    <local:VWDetalle/>
+
 </TabbedPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_autolote.Views.VWDetalle"
+             xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel" 
+             Title="Factura">
+
+
+    <ContentPage.BindingContext>
+        <local:VMDetalle></local:VMDetalle>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView
+                ItemsSource="{Binding ListaDetalle}"
+                SelectionMode="Single"
+                SelectedItem="{Binding DetalleSeleccionado}">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackLayout Padding="3,3">
+
+                            <Frame CornerRadius="10" BackgroundColor="WhiteSmoke">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="#F7AD32"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.9*" />
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding id_detalle}" 
+                                           Grid.Row="0" 
+                                           Grid.Column="0"
+                                           FontSize="Default" 
+                                           FontAttributes="bold"
+                                           Grid.ColumnSpan="2"
+                                           VerticalOptions="Center"/>
+                                    <Label Text="{Binding id_factura}" 
+                                           FontSize="Caption"
+                                           Grid.Column="0"
+                                           Grid.Row="1" 
+                                           Grid.ColumnSpan="2"
+                                           VerticalOptions="Center"
+                                            />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Label TextColor="White"   Text="Informacion de la Factura"/>
+
+            <Label TextColor="White"  Text="{Binding DetalleSeleccionado.id_detalle}"/>
+            <Label TextColor="White"  Text="{Binding DetalleSeleccionado.id_factura}"/>
+            <Label TextColor="White"  Text="{Binding DetalleSeleccionado.id_tipo_pago}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

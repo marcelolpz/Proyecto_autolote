@@ -6,28 +6,28 @@ namespace Proyecto_autolote.ModelsWebServices
 {
     
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
-    public class ItemCliente
+    public class ItemTelefono
     {
+        public int id_telefono { get; set; }
         public string identidad { get; set; }
-        public string nombres { get; set; }
-        public string apellidos { get; set; }
-        public int edad { get; set; }
+        public int telefono { get; set; }
     }
 
-    public class LinkCliente
+    public class LinkTelefono
     {
         public string rel { get; set; }
         public string href { get; set; }
     }
 
-    public class ClienteModel
+    public class TelefonoModel
     {
-        public List<ItemCliente> items { get; set; }
+        public List<ItemTelefono> items { get; set; }
         public bool hasMore { get; set; }
         public int limit { get; set; }
         public int offset { get; set; }
         public int count { get; set; }
-        public List<LinkCliente> links { get; set; }
+        public List<LinkTelefono> links { get; set; }
     }
+
 
 }

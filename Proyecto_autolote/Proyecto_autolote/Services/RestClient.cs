@@ -47,5 +47,31 @@ namespace Proyecto_autolote.Services
             return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
         }
 
+        public async Task<T> ListaCliente<T>()
+        {
+            HttpClient client = new HttpClient();
+            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/cliente/crud_cliente";
+            var response = await client.GetAsync(url);
+            var jsonstring = await response.Content.ReadAsStringAsync();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
+        }
+        public async Task<T> ListaTelefono<T>()
+        {
+            HttpClient client = new HttpClient();
+            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/telefono/crud_telefono";
+            var response = await client.GetAsync(url);
+            var jsonstring = await response.Content.ReadAsStringAsync();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
+        }
+
+        public async Task<T> ListaDetalle<T>()
+        {
+            HttpClient client = new HttpClient();
+            string url = "https://apex.oracle.com/pls/apex/proyetoautolote/detalle_factura/crud_detalle_factura";
+            var response = await client.GetAsync(url);
+            var jsonstring = await response.Content.ReadAsStringAsync();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstring);
+        }
+
     }
 }
