@@ -89,7 +89,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Proyecto_autolote\Proyecto_autolote.csproj">
       <Project>{49CE1C09-498D-4719-AC93-EAE7D8A8AAFA}</Project>
