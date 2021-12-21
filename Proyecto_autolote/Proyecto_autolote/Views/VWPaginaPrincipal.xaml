@@ -12,5 +12,6 @@
     <local:VWAutos/>
     <local:VWMantenimiento/>
     <local:VWCliente/>
+    <local:VWFacturaWebview/>
 
 </TabbedPage>

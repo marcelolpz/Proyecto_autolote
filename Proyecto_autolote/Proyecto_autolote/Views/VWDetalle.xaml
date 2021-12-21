@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto_autolote.Views.VWDetalle"
              xmlns:local="clr-namespace:Proyecto_autolote.Viewmodel" 
-             Title="Factura">
+             Title="Detalle">
 
 
     <ContentPage.BindingContext>

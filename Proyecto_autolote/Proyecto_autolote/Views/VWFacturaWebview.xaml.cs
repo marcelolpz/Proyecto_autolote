@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Proyecto_autolote.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class VWPaginaPrincipal : TabbedPage
+    public partial class VWFacturaWebview : ContentPage
     {
-        public VWPaginaPrincipal()
+        public VWFacturaWebview()
         {
             InitializeComponent();
         }
-
     }
 }

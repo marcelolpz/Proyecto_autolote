@@ -16,5 +16,11 @@ namespace Proyecto_autolote.Views
         {
             InitializeComponent();
         }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            InitializeComponent();
+        }
     }
 }
