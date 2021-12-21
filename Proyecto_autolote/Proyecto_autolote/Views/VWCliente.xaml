@@ -19,7 +19,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
 
-                        <StackLayout Padding="3,3">
+                        <StackLayout Padding="3,2">
 
                             <Frame CornerRadius="10" BackgroundColor="WhiteSmoke">
                                 <VisualStateManager.VisualStateGroups>
@@ -33,7 +33,7 @@
                                 </VisualStateManager.VisualStateGroups>
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="1.9*" />
+                                        <RowDefinition Height="*" />
 
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
@@ -43,7 +43,7 @@
                                     <Label Text="{Binding identidad}" 
                                            Grid.Row="0" 
                                            Grid.Column="0"
-                                           FontSize="Default" 
+                                           FontSize="Caption" 
                                            FontAttributes="bold"
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"/>
@@ -56,8 +56,8 @@
                                             />
                                     <Label Text="{Binding apellidos}" 
                                            FontSize="Caption"
-                                           Grid.Column="0"
-                                           Grid.Row="2" 
+                                           Grid.Column="1"
+                                           Grid.Row="1" 
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"
                                             />
@@ -70,12 +70,16 @@
             </CollectionView>
            
             
-            <Label TextColor="White"   Text="Informacion de los clientes: "/>
+            <Label TextColor="White" FontSize="Micro"  Text="Informacion de los Clientes: "/>
 
-            <Label TextColor="White"  Text="{Binding ClienteSeleccionado.identidad}"/>
-            <Label TextColor="White"  Text="{Binding ClienteSeleccionado.nombres}"/>
-            <Label TextColor="White"  Text="{Binding ClienteSeleccionado.apellidos}"/>
-            <Label TextColor="White"  Text="{Binding ClienteSeleccionado.edad}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Identidad:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding ClienteSeleccionado.identidad}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Nombres:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding ClienteSeleccionado.nombres}"/>
+            <Label TextColor="White"  FontSize="Micro" Text="Apellidos:"/>
+            <Label TextColor="White" FontSize="Micro"  Text="{Binding ClienteSeleccionado.apellidos}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Edad:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding ClienteSeleccionado.edad}"/>
 
         </StackLayout>
     </ContentPage.Content>

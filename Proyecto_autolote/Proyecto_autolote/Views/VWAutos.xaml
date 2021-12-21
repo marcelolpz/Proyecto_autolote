@@ -31,7 +31,7 @@
                                 </VisualStateManager.VisualStateGroups>
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="1.9*" />
+                                        <RowDefinition Height="*" />
 
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
@@ -41,7 +41,7 @@
                                     <Label Text="{Binding placa}" 
                                            Grid.Row="0" 
                                            Grid.Column="0"
-                                           FontSize="Default" 
+                                           FontSize="Caption" 
                                            FontAttributes="bold"
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"/>
@@ -55,19 +55,26 @@
                                 </Grid>
                             </Frame>
                         </StackLayout>
+                        
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
             </CollectionView>
+            <Label TextColor="White" FontSize="Micro"  Text="Informacion de los autos:"/>
 
-            <Label TextColor="White"   Text="Informacion de los autos"/>
-
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.placa}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.modelo}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.marca}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.year}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.precio}"/>
-            <Label TextColor="White"  Text="{Binding AutoSeleccionado.id_estado}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Placa:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding AutoSeleccionado.placa}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Modelo:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding AutoSeleccionado.modelo}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Marca:"/>
+            <Label TextColor="White" FontSize="Micro"  Text="{Binding AutoSeleccionado.marca}"/>
+            <Label TextColor="White"  FontSize="Micro" Text="Año:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding AutoSeleccionado.year}"/>
+            <Label TextColor="White"  FontSize="Micro" Text="Precio:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding AutoSeleccionado.precio}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Estado:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding AutoSeleccionado.tipo_estado}"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

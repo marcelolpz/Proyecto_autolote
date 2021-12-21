@@ -13,11 +13,11 @@ namespace Proyecto_autolote.ModelsWebServices
         public string color { get; set; }
         public int year { get; set; }
         public int precio { get; set; }
-        public string foto { get; set; }
+        public int? foto { get; set; }
         public string mime_char { get; set; }
         public string file_name { get; set; }
         public object char_set { get; set; }
-        public int id_estado { get; set; }
+        public string tipo_estado { get; set; }
     }
 
     public class LinkAuto
@@ -35,6 +35,4 @@ namespace Proyecto_autolote.ModelsWebServices
         public int count { get; set; }
         public List<LinkAuto> links { get; set; }
     }
-
-
 }

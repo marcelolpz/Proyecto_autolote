@@ -5,12 +5,13 @@ using System.Text;
 namespace Proyecto_autolote.ModelsWebServices
 {
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    
     public class ItemMantenimiento
     {
         public int id_mantenimiento { get; set; }
         public string placa { get; set; }
         public string descripcion_problema { get; set; }
-        public int id_mecanico { get; set; }
+        public string nombre_mecanico { get; set; }
         public int costo { get; set; }
         public DateTime fecha { get; set; }
     }
@@ -20,6 +21,7 @@ namespace Proyecto_autolote.ModelsWebServices
         public string rel { get; set; }
         public string href { get; set; }
     }
+
     public class MantenimientoModel
     {
         public List<ItemMantenimiento> items { get; set; }

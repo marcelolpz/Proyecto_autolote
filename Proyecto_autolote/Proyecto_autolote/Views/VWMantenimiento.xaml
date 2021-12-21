@@ -32,7 +32,7 @@
                                 </VisualStateManager.VisualStateGroups>
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="1.9*" />
+                                        <RowDefinition Height="*" />
 
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
@@ -42,7 +42,7 @@
                                     <Label Text="{Binding placa}" 
                                            Grid.Row="0" 
                                            Grid.Column="0"
-                                           FontSize="Default" 
+                                           FontSize="Caption" 
                                            FontAttributes="bold"
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="Center"/>
@@ -58,18 +58,23 @@
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-
+                
             </CollectionView>
-
-            <Label TextColor="White"   Text="Informacion de los autos"/>
-
-            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.placa}"/>
-            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.id_mantenimiento}"/>
-            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.descripcion_problema}"/>
-            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.id_mecanico}"/>
-            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.costo}"/>
-            <Label TextColor="White"  Text="{Binding MantenimientoSeleccionado.fecha}"/>
             
+            <Label TextColor="White"   Text="Informacion de Mantenimiento:"/>
+
+            <Label TextColor="White" FontSize="Micro"  Text="Placa:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding MantenimientoSeleccionado.placa}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Descripcion de problema:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding MantenimientoSeleccionado.descripcion_problema}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Mecanico:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding MantenimientoSeleccionado.nombre_mecanico}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Costo:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding MantenimientoSeleccionado.costo}"/>
+            <Label TextColor="White" FontSize="Micro"  Text="Fecha:"/>
+            <Label TextColor="White" FontSize="Micro" Text="{Binding MantenimientoSeleccionado.fecha}"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 
